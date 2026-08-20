@@ -27,9 +27,40 @@ function ProjectVisual({ type }) {
 export default function App() {
   return <main>
     <section className="hero" id="home">
-      <video className="hero-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/hero-loop.mp4" type="video/mp4"/></video><div className="hero-shade"/>
-      <header className="site-header shell"><a className="brand" href="#home" aria-label="返回首页"><span className="brand-mark">F</span><span>FISH PORTFOLIO</span></a><nav aria-label="主导航"><a href="#resume">简历</a><a href="#projects">项目</a><a href="#capabilities">能力</a></nav><a className="contact-button" href="#contact">联系我 <span>↗</span></a></header>
-      <div className="hero-content shell"><div className="hero-kicker"><span>UI DESIGN</span><i/><span>AI DESIGN</span><i/><span>VISUAL & MOTION</span></div><h1><span>让复杂被理解，</span><span className="hero-indent">让智能更<strong>自然。</strong></span></h1><div className="hero-meta"><div><p className="hero-name">刘宇林 / Fish</p><p>UI 设计师 · AI 设计师 · 动画原画设计师</p></div><p className="hero-summary">13 年视觉与产品设计经验，参与产品从概念、发布到持续迭代的完整体验设计。</p><a href="#projects" className="explore-link">查看作品 <span>↓</span></a></div></div><div className="hero-index" aria-hidden="true"><span>01</span><i/><span>05</span></div>
+      <video className="hero-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/hero-loop.mp4" type="video/mp4"/></video>
+      <div className="hero-shade"/>
+      <div className="hero-noise" aria-hidden="true"/>
+
+      <header className="site-header shell">
+        <a className="brand" href="#home" aria-label="返回首页"><span className="brand-mark">F</span><span>FISH / PORTFOLIO</span></a>
+        <nav aria-label="主导航"><a href="#projects">精选项目</a><a href="#resume">关于我</a><a href="#capabilities">核心能力</a></nav>
+        <a className="contact-button" href="#contact">联系我 <span>↗</span></a>
+      </header>
+
+      <div className="hero-content shell">
+        <div className="hero-kicker">
+          <span>PORTFOLIO / 2026</span><i/>
+          <span>UI · AI · VISUAL & MOTION</span>
+          <span className="hero-status"><b/> OPEN TO OPPORTUNITIES</span>
+        </div>
+
+        <div className="hero-title-wrap">
+          <p className="hero-side-note">DESIGNING CLARITY<br/>INTO EVERY EXPERIENCE</p>
+          <h1>
+            <span>让复杂变清楚，</span>
+            <span className="hero-indent">让体验更<strong>自然。</strong></span>
+          </h1>
+          <span className="hero-signature" aria-hidden="true">Fish</span>
+        </div>
+
+        <div className="hero-meta">
+          <div><p className="hero-name">刘宇林 / Fish</p><p>UI 设计师 · AI 设计师 · 动画原画设计师</p></div>
+          <p className="hero-summary">从视觉表达到产品共建，持续参与产品从概念、发布到成长迭代的完整设计过程。</p>
+          <a href="#projects" className="explore-link">VIEW SELECTED WORK <span>↓</span></a>
+        </div>
+      </div>
+
+      <div className="hero-index" aria-hidden="true"><span>01</span><i/><span>05</span></div>
     </section>
 
     <section className="resume section" id="resume"><div className="shell"><div className="section-label"><span>02</span><p>PROFILE / 个人简历</p></div><div className="resume-grid"><div className="portrait-card"><span>FISH</span><div className="portrait-glow"/><p>UI / AI / MOTION</p></div><div className="resume-main"><p className="resume-role">UI/UX & AI PRODUCT DESIGNER</p><h2>产品背后，<br/>那位“看不见的设计共建者”。</h2><p className="resume-intro">拥有 13 年视觉与产品设计经验，我擅长主导产品从概念雏形（0）、首次发布（1），到持续成长迭代（2）的完整体验设计。清晰的视觉秩序不只是美感表达，更是产品清晰、易用和持续成长的基础。现在，我也在持续探索 AIGC 如何自然地融入设计流程与产品体验。</p><div className="resume-contact"><div><small>LOCATION</small><p>珠海，中国</p></div><div><small>WECHAT</small><p>Fish-1020-A</p></div><div><small>EMAIL</small><a href="mailto:617781773@qq.com">617781773@qq.com</a></div></div></div></div><div className="career-list">{career.map(([year,title,copy])=><article key={title}><span>{year}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
